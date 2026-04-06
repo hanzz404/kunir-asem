@@ -308,6 +308,14 @@ section {
 }
 
 /* Detail Produk */
+
+.products-list {
+  display: flex;
+  flex-direction: column; /* Menyusun produk ke bawah */
+  gap: 3rem; /* Jarak pemisah antar produk, tidak akan mepet lagi */
+  margin-top: 2rem;
+}
+
 .product-detail {
   display: flex;
   align-items: center;
@@ -334,8 +342,8 @@ section {
 }
 .tag {
   display: inline-block;
-  background: rgba(139, 69, 19, 0.1);
-  color: var(--primary-brown);
+  background: lab(61.02% -62.33 55.73 / 0.215);
+  color: var(--primary-white);
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 0.9rem;
