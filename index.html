@@ -12,13 +12,20 @@
   </head>
   <body>
     <nav class="navbar">
-      <div class="logo">Pawon <span>Gelafid</span></div>
-      
+      <a href="index.html" class="nav-brand">
+        <img
+          src="/asset/logo.png"
+          alt="Logo SMA Muhammadiyah 2"
+          class="nav-logo"
+        />
+        Pawon Gelafid
+      </a>
       <ul class="nav-links">
         <li><a href="#beranda">Beranda</a></li>
         <li><a href="#produk">Produk</a></li>
         <li><a href="#kontak">Kontak</a></li>
         <li><a href="artikel.html">Artikel</a></li>
+        <li><a href="artikel.html#galeri-grid">Galeri</a></li>
       </ul>
 
       <div class="nav-controls">
@@ -28,7 +35,7 @@
             <span class="slider"></span>
           </label>
         </div>
-        
+
         <div class="menu-toggle">
           <i class="bx bx-menu"></i>
         </div>
@@ -92,7 +99,7 @@
       </div>
     </section>
 
-     <section id="produk" class="fade-in">
+    <section id="produk" class="fade-in">
       <h2>Produk Unggulan Kami</h2>
 
       <div class="products-list">
@@ -169,7 +176,7 @@
         </div>
       </div>
     </section>
-    
+
     <section class="fade-in">
       <h2>Cara Pemesanan Mudah</h2>
       <div
@@ -260,5 +267,36 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <div class="chatbot-container">
+      <div id="chatbot-tooltip" class="chatbot-tooltip">Tanya bot kunir</div>
+
+      <button id="chatbot-toggle" class="chatbot-toggle">
+        <i class="bx bx-chat"></i>
+      </button>
+
+      <div id="chatbot-window" class="chatbot-window hidden">
+        <div class="chatbot-header">
+          <h3>Tanya Gelafid</h3>
+          <button id="chatbot-close"><i class="bx bx-x"></i></button>
+        </div>
+
+        <div id="chatbot-messages" class="chatbot-messages">
+          <div class="message bot-message">
+            Halo! Ada yang bisa dibantu seputar Jamu Kunir Asem Pawon Gelafid?
+          </div>
+        </div>
+
+        <div class="chatbot-input">
+          <input
+            type="text"
+            id="chatbot-text"
+            placeholder="Tanya sesuatu..."
+            autocomplete="off"
+          />
+          <button id="chatbot-send"><i class="bx bx-send"></i></button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
