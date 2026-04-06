@@ -488,22 +488,20 @@ footer a:hover {
     display: block;
   }
 
-  @media (max-width: 768px) {
-    .navbar {
-      left: 0;
-      transform: none;
-      width: 100%;
-      border-radius: 0;
-      top: 0;
-      .navbar {
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-      }
-    }
-    [data-theme="dark"] .navbar {
-      background: rgba(20, 20, 20, 0.25);
-    }
+  /* Perbaikan Navbar di HP */
+  .navbar {
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  [data-theme="dark"] .navbar {
+    background: rgba(20, 20, 20, 0.25);
   }
 
   .nav-links {
@@ -519,22 +517,27 @@ footer a:hover {
     transition: 0.3s ease;
     backdrop-filter: blur(15px);
   }
+
   .nav-links.active {
     left: 0;
   }
+
   .hero {
     flex-direction: column;
     text-align: center;
     padding-top: 120px;
   }
+
   .hero-content {
     padding-right: 0;
     margin-bottom: 3rem;
   }
+
   .hero-buttons {
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .product-detail {
     flex-direction: column;
     padding: 2rem;
@@ -600,9 +603,26 @@ footer a:hover {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* Kunci menjadi persis 3 kolom dengan ukuran sama rata */
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 1.5rem;
+}
+
+/* Responsif: Jika dibuka di HP/layar kecil, ubah strukturnya agar gambar tidak kekecilan */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Jadi 2 kolom di tablet/HP layar lebar */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Jadi 1 kolom bersusun ke bawah di HP biasa */
+  }
 }
 
 .gallery-item {
